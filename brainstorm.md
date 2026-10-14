@@ -80,16 +80,19 @@
 
 ## NAO
 
-### Idea 1
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...)
+### Idea 1 - Creativa
+- **Tema:** Friends: qué hace a un episodio exitoso
+- **Dataset y fuente (link):** https://www.kaggle.com/datasets/rezaghari/friends-series-dataset
+- **Pregunta posible:** ¿Qué se asocia con los episodios mejor valorados: la temporada, el director o el personaje en el que se centra la trama?
+- **¿Por qué es interesante?:** Permite analizar con datos el peso de la época, el equipo creativo y los personajes en el éxito de una serie muy popular.
+- **¿Los datos se pueden descargar fácil?** Sí, CSV en Kaggle con los 236 episodios. Los personajes se detectan a partir del resumen de cada episodio.
 
-### Idea 2
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?**
+### Idea 2 — Estructurada
+- **Tema:** Siniestros viales en la Ciudad de Buenos Aires
+- **Dataset y fuente (link):** [Víctimas de siniestros viales — data.buenosaires.gob.ar](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales)
+- **Pregunta posible:** ¿En qué horarios, días y comunas se concentran los siniestros viales, y qué tipos de vehículos están más involucrados?
+- **¿Por qué es interesante?:** Permite identificar patrones útiles para orientar políticas de prevención en seguridad vial.
+- **¿Los datos se pueden descargar fácil?** Sí, CSV oficial con notas metodológicas. Ojo: el año 2020 está afectado por la pandemia.
+
+
+  
