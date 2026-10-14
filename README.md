@@ -9,6 +9,7 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 | Nombre y apellido | N° de registro | Usuario de GitHub |
 |-------------------|----------------|-------------------|
 | Naomi Asato       | 922221         | @enedenao         |
+| Bautista Cortés     | 922142        | @bauti0727         |
 
 
 ## Tema y pregunta de investigación
