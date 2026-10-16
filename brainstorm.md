@@ -33,12 +33,12 @@
 - **¿Por qué es interesante?:** Proporciona información valiosa sobre el panorama de los videojuegos, ayudando a desarrolladores, profesionales del marketing e investigadores a identificar tendencias y preferencias en la comunidad de jugadores.
 - **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...) Sí, CSV en Kaggle con los datos de la encuentra realizada a 500 personas.
 
-### Idea 2
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?**
+### Idea 2 - Estructurada/Formal
+- **Tema:** Seguridad: Delitos en la ciudad de Bs As.
+- **Dataset y fuente (link):** https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+- **Pregunta posible:** ¿Qué barrio o Comuna de la ciudad de Buenos Aires es más segura en cuanto a los Delitos?
+- **¿Por qué es interesante?:** Permite identificar los barrios más peligrosos y de esta manera aplicar nuevas políticas en cuanto a seguridad y también es de mucha información para el mercado Inmobiliario.
+- **¿Los datos se pueden descargar fácil?** Sí, CSV y también hay (2025 Mapa del Delito - Resumen ejecutivo (PDF))
  
 ---
 
