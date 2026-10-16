@@ -10,14 +10,14 @@
 
 ### Idea 1
 - **Tema:** Videojuegos
-- **Dataset y fuente (link):**https://www.kaggle.com/datasets/gregorut/videogamesales
+- **Dataset y fuente (link):** https://www.kaggle.com/datasets/gregorut/videogamesales
 - **Pregunta posible:**¿Cual es el genero que mas consume la gente y en que plataforma?
 - **¿Por qué es interesante?:** porque permite a las empresas ver que genero se venden mas
 - **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...) si, se puede descargar un CSV desde KAGGLE
 
 ### Idea 2
 - **Tema:** Peliculas
-- **Dataset y fuente (link):**https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
+- **Dataset y fuente (link):** https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
 - **Pregunta posible:** ¿Que peliculas pudieron inspirar a otros directores?
 - **¿Por qué es interesante?:** es interesante ya que se puede ver que pelicula es,en que año se lanzo,género,director,etc
 - **¿Los datos se pueden descargar fácil?**si,desde kaggle
