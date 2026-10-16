@@ -12,7 +12,7 @@
 - **Tema:** Videojuegos
 - **Dataset y fuente (link):** https://www.kaggle.com/datasets/gregorut/videogamesales
 - **Pregunta posible:**¿Cual es el genero que mas consume la gente y en que plataforma?
-- **¿Por qué es interesante?:** porque permite a las empresas ver que genero se venden mas
+- **¿Por qué es interesante?:** porque permite a las empresas ver que genero se vende mas y en que plataforma
 - **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...) si, se puede descargar un CSV desde KAGGLE
 
 ### Idea 2
