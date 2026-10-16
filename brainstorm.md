@@ -18,7 +18,7 @@
 ### Idea 2
 - **Tema:** Peliculas
 - **Dataset y fuente (link):** https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
-- **Pregunta posible:** ¿Que peliculas pudieron inspirar a otros directores?
+- **Pregunta posible:** ¿Que peliculas fueron las mas taquilleras y a que genero pertenecen?
 - **¿Por qué es interesante?:** es interesante ya que se puede ver que pelicula es,en que año se lanzo,género,director,etc
 - **¿Los datos se pueden descargar fácil?**si,desde kaggle
 
