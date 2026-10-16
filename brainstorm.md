@@ -26,12 +26,12 @@
 
 ## JOSÉ
 
-### Idea 1
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...)
+### Idea 1 - Creativa
+- **Tema:** Juegos: Preferencias y hábitos de juego
+- **Dataset y fuente (link):** https://www.kaggle.com/datasets/pranshudev/gaming-preferences-and-habits-player-survey-2024/data
+- **Pregunta posible:** ¿Qué lleva a una persona a elegir entre un tipo de juego y otro?
+- **¿Por qué es interesante?:** Proporciona información valiosa sobre el panorama de los videojuegos, ayudando a desarrolladores, profesionales del marketing e investigadores a identificar tendencias y preferencias en la comunidad de jugadores.
+- **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...) Sí, CSV en Kaggle con los datos de la encuentra realizada a 500 personas.
 
 ### Idea 2
 - **Tema:**
