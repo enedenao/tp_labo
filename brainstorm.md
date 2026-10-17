@@ -8,14 +8,14 @@
 
 ## BAUTI
 
-### Idea 1
+### Idea 1 Creativa
 - **Tema:** Videojuegos
 - **Dataset y fuente (link):** https://www.kaggle.com/datasets/gregorut/videogamesales
 - **Pregunta posible:**¿Cual es el genero que mas consume la gente y en que plataforma?
 - **¿Por qué es interesante?:** porque permite a las empresas ver que genero se vende mas y en que plataforma
 - **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...) si, se puede descargar un CSV desde KAGGLE
 
-### Idea 2
+### Idea 2 Estructurada
 - **Tema:** Peliculas
 - **Dataset y fuente (link):** https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
 - **Pregunta posible:** ¿Que peliculas fueron las mas taquilleras y a que genero pertenecen?
