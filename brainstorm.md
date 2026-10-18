@@ -42,22 +42,24 @@
  
 ---
 
-## DAMI
+## dagut-rrd
 
-### Idea 1
-- **Tema:**
+### Idea 1 — Estructurada
+- **Tema:** Bitcoin y política monetaria de EE.UU.
 - **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...)
+  - Cotización histórica BTC-USD (Yahoo Finance): https://finance.yahoo.com/quote/BTC-USD/history/ (se descarga con `yfinance` en Python)
+  - Tasa de fondos federales de la Fed (FRED, serie FEDFUNDS): https://fred.stlouisfed.org/series/FEDFUNDS
+- **Pregunta posible:** ¿Cómo se comportó el precio de Bitcoin en los ciclos de suba y baja de tasas de la Fed?
+- **¿Por qué es interesante?:** Permite ver si un activo "alternativo" reacciona a la política monetaria como un activo de riesgo tradicional.
+- **¿Los datos se pueden descargar fácil?** Sí: `yfinance` en Python y CSV directo desde FRED.
 
-### Idea 2
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?**
-  
+### Idea 2 — Creativa
+- **Tema:** Aeropuertos y turismo: ¿a dónde vuela Argentina y cuándo?
+- **Dataset y fuente (link):** Conectividad Aérea (ANAC / Ministerio de Turismo): https://datos.gob.ar/dataset/turismo-conectividad-aerea
+- **Pregunta posible:** ¿Qué aeropuertos y rutas concentran más pasajeros, y cómo cambia según la temporada (verano vs. invierno)? ¿Qué rutas tienen el mayor factor de ocupación?
+- **¿Por qué es interesante?:** Muestra la estacionalidad del turismo interno (por ejemplo, destinos de nieve vs. de playa) y sirve para pensar dónde agregar frecuencias o asientos.
+- **¿Los datos se pueden descargar fácil?** Sí, CSV oficiales con datos diarios y mensuales desde 2017. Ojo: 2020–2021 están afectados por la pandemia.
+
 ---
 
 ## GABY
