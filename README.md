@@ -11,7 +11,7 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 | Bautista Cortés    | 922142         | @bauti0727        |
 | José Luis Joannás  | 922214         | @PAKETTE          |
 | Naomi Asato        | 922221         | @enedenao         |
-
+| dagut-rrd          | — (formulario)  | @dagut-rrd        |
 
 
 ## Tema y pregunta de investigación
