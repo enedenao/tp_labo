@@ -4,6 +4,29 @@
 - **Debate y elección:** sábado 17/10
 - **Formulario de inscripción:** antes del domingo 18/10
 
+## Tema elegido y proceso de decisión
+
+**Dataset elegido:** Delitos en la Ciudad de Buenos Aires — 2023 (CSV)
+**Fuente:** Buenos Aires Data (Gobierno de la Ciudad) — https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+**Pregunta de investigación (versión inicial):** ¿Qué barrio o comuna de la Ciudad de Buenos Aires es más segura en cuanto a los delitos?
+
+### Cómo llegamos a esta elección
+
+1. **Brainstorm individual:** se generaron diferentes ideas, indicando tema, dataset, pregunta posible, por qué era interesante y si los datos se podían descargar fácilmente.
+2. **Debate en el grupo de WhatsApp:** pusimos en común todas las propuestas y discutimos ventajas y desventajas de cada una: calidad de la fuente, facilidad de descarga, volumen de datos y si permitían cumplir con los requisitos del enunciado.
+3. **Elección:**  el grupo eligió el dataset de delitos de CABA propuesto por José.
+4. **Inscripción:** se completó el formulario de inscripción antes del domingo 18/10.
+
+### Por qué elegimos esta opción
+
+- **Fuente oficial y confiable:** datos publicados por el Gobierno de la Ciudad, con un diccionario de variables documentado. Como grupo preferimos fuentes oficiales antes que datasets de Kaggle y las otras opciones nos parecian más complejas para el análisis en relación al tiempo de entrega.
+- **Descarga directa en CSV:** no requiere API ni scraping, se carga en pandas sin complicaciones.
+- **Cubre los tres tipos de gráfico que pide la cátedra:**
+- **Pregunta clara y respondible** con los datos disponibles.
+
+
+
+### Opciones descartadas:
 ---
 
 ## BAUTI
@@ -62,23 +85,6 @@
 
 ---
 
-## GABY
-
-### Idea 1
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?** (CSV, API, Kaggle...)
-
-### Idea 2
-- **Tema:**
-- **Dataset y fuente (link):**
-- **Pregunta posible:**
-- **¿Por qué es interesante?:**
-- **¿Los datos se pueden descargar fácil?**
-  
----
 
 ## NAO
 
