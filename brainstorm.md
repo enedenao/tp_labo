@@ -102,5 +102,19 @@
 - **¿Por qué es interesante?:** Permite identificar patrones útiles para orientar políticas de prevención en seguridad vial.
 - **¿Los datos se pueden descargar fácil?** Sí, CSV oficial con notas metodológicas. Ojo: el año 2020 está afectado por la pandemia.
 
-
+## ggoldadler-blip
   
+### Idea 1 - Creativa
+- **Tema:** Peliculas (opera prima vs. segunda pelicula)
+- **Dataset y fuente (link):** https://datasets.imdbws.com/
+- **Pregunta posible:** ¿Las películas de un director mejoran o empeoran con la experiencia? ¿La segunda obra se valora peor que la ópera prima? 
+- **¿Por qué es interesante?:** Analizar si la segunda película de un director se valora peor que su ópera prima permite poner a prueba una creencia popular con datos.
+- **¿Los datos se pueden descargar fácil?** No necesitás cuenta ni API, a diferencia de TMDB. El formato es simple.
+
+### Idea 2 — Estructurada
+- **Tema:** Salud (Evolucion de muertes por HIV)
+- **Dataset y fuente (link):** https://www.argentina.gob.ar/salud/vih-its
+https://www.argentina.gob.ar/salud/deis/datos/defunciones 
+- **Pregunta posible:** ¿Cómo evolucionaron el número y la tasa de muertes por sida en Argentina entre 2005 y 2024, por sexo, y en qué momento cambió la tendencia?
+- **¿Por qué es interesante?:** Es un indicador de qué tan bien funciona el sistema de salud. Con tratamiento antirretroviral sostenido, el VIH pasó de ser una enfermedad mortal a una condición crónica. 
+- **¿Los datos se pueden descargar fácil?** Si, son CSV con link directo.
