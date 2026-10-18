@@ -30,12 +30,13 @@ Registro de homicidios, hurtos, lesiones y robos ocurridos en la Ciudad durante 
 
 ## Contenido del repositorio
 
-- `brainstorm.md` — propuestas de temas y preguntas de cada integrante
-- `notebook/` — análisis en Python
-- `data/` — dataset/instrucciones para obtenerlo
+- [brainstorm.md](brainstorm.md) — propuestas de temas y preguntas de cada integrante
+- [notebook.ipynb](notebook.ipynb) — análisis en Python
+- [/data](/data) — dataset/instrucciones para obtenerlo
 - `figuras/` — gráficos exportados
 - `informe/` — informe académico en PDF
-- `presentacion/` — presentación de la defensa
+- [/presentación](/presentación) — presentación de la defensa
+- [/bibliografía](/bibliografía) — bibliografía
   
 ## Fechas clave
 
