@@ -12,7 +12,7 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 | José Luis Joannás  | 922214         | @PAKETTE          |
 | Naomi Asato        | 922221         | @enedenao         |
 | dagut-rrd          | — (formulario)  | @dagut-rrd        |
-
+| Gabriel Goldadler  | 922212         | @ggoldadler-blip  |
 
 ## Tema y pregunta de investigación
 
