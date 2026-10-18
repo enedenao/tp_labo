@@ -9,14 +9,14 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 | Nombre y apellido  | N° de registro | Usuario de GitHub |
 |--------------------|----------------|-------------------|
 | Bautista Cortés    | 922142         | @bauti0727        |
+| Gabriel Goldadler  | 922212         | @ggoldadler-blip  |
 | José Luis Joannás  | 922214         | @PAKETTE          |
 | Naomi Asato        | 922221         | @enedenao         |
 | dagut-rrd          | — (formulario)  | @dagut-rrd        |
-| Gabriel Goldadler  | 922212         | @ggoldadler-blip  |
 
 ## Tema y pregunta de investigación
 
-*A definir. Ver propuestas en [brainstorm.md](brainstorm.md).*
+* Ver propuestas en [brainstorm.md](brainstorm.md).*
 
 ## Dataset
 
