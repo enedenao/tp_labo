@@ -20,18 +20,24 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 
 ## Dataset
 
-*A definir: nombre, fuente y link de descarga.*
+**Delitos en la Ciudad de Buenos Aires — 2023**
+**Fuente:** Buenos Aires Data, Gobierno de la Ciudad de Buenos Aires
+**Link original:** https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+
+Registro de homicidios, hurtos, lesiones y robos ocurridos en la Ciudad durante 2023, con fecha, franja horaria, tipo y subtipo de delito, uso de arma o moto, barrio, comuna y coordenadas geográficas.
+
+**Copia en el repositorio:** [`data/delitos_2023.zip`](data/delitos_2023.zip). Ver [`data/README.md`](data/README.md) para más detalles.
 
 ## Contenido del repositorio
 
 - `brainstorm.md` — propuestas de temas y preguntas de cada integrante
 - `notebook/` — análisis en Python
-- `data/` — dataset o instrucciones para obtenerlo
+- `data/` — dataset/instrucciones para obtenerlo
 - `figuras/` — gráficos exportados
 - `informe/` — informe académico en PDF
 - `presentacion/` — presentación de la defensa
   
 ## Fechas clave
 
-- **18/10/2026** — inscripción del grupo
+- ~~18/10/2026** — inscripción del grupo~~
 - **06/11/2026** — entrega y defensa
