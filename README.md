@@ -25,7 +25,9 @@ El proceso de elección del tema y el cambio de dataset están documentados en [
 ## Dataset
 
 **The Simpsons Data** 
+
 **Fuente:** recopilación de Todd Schneider y publicado en Kaggle.
+
 **Link original:** https://github.com/sujanjoejacob/Text-mining-with-Simpsons-Data
 
 
