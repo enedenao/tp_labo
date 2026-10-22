@@ -31,7 +31,7 @@ El proceso de elección del tema y el cambio de dataset están documentados en [
 **Link original:** https://github.com/sujanjoejacob/Text-mining-with-Simpsons-Data
 
 
-Se usan dos tablas, ambas copiadas en [`data/`](data/):
+Se usan dos tablas, ambas copiadas en [`/data`](data/):
 
 - `simpsons_episodes.csv`: temporada, fecha de emisión, rating de IMDb, votos y audiencia en EE.UU. de cada episodio.
 - `simpsons_script_lines.csv.zip`: cada línea de guion con el episodio, el personaje que habla y la cantidad de palabras (CSV comprimido por su tamaño).
