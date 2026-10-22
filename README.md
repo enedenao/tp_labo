@@ -12,21 +12,30 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 | Gabriel Goldadler  | 922212         | @ggoldadler-blip  |
 | José Luis Joannás  | 922214         | @PAKETTE          |
 | Naomi Asato        | 922221         | @enedenao         |
-| dagut-rrd          | — (formulario)  | @dagut-rrd        |
+| dagut-rrd          | — (formulario)  | @dagut-rrd       |
 
 ## Tema y pregunta de investigación
 
-* Ver propuestas en [brainstorm.md](brainstorm.md).*
+**Tema:** distribución del diálogo entre personajes y valoración de los episodios de *Los Simpson*.
+
+**Pregunta:** ¿Qué personajes concentran el diálogo en *Los Simpson*, y existe una asociación entre el protagonismo de los personajes principales y la valoración de los episodios en IMDb que se mantenga a lo largo de las décadas?
+
+El proceso de elección del tema y el cambio de dataset están documentados en [brainstorm.md](brainstorm.md).*
 
 ## Dataset
 
-**Delitos en la Ciudad de Buenos Aires — 2023**
-**Fuente:** Buenos Aires Data, Gobierno de la Ciudad de Buenos Aires
-**Link original:** https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+**The Simpsons Data** 
+**Fuente:** recopilación de Todd Schneider y publicado en Kaggle.
+**Link original:** https://github.com/sujanjoejacob/Text-mining-with-Simpsons-Data
 
-Registro de homicidios, hurtos, lesiones y robos ocurridos en la Ciudad durante 2023, con fecha, franja horaria, tipo y subtipo de delito, uso de arma o moto, barrio, comuna y coordenadas geográficas.
 
-**Copia en el repositorio:** [`data/delitos_2023.zip`](data/delitos_2023.zip). Ver [`data/README.md`](data/README.md) para más detalles.
+Se usan dos tablas, ambas copiadas en [`data/`](data/):
+
+- `simpsons_episodes.csv`: temporada, fecha de emisión, rating de IMDb, votos y audiencia en EE.UU. de cada episodio.
+- `simpsons_script_lines.csv.zip`: cada línea de guion con el episodio, el personaje que habla y la cantidad de palabras (CSV comprimido por su tamaño).
+
+Ver [`data/README.md`](data/README.md) para más detalles.
+
 
 ## Contenido del repositorio
 
