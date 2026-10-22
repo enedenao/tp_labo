@@ -1,13 +1,16 @@
 # Datos
 
-**Dataset:** Delitos en la Ciudad de Buenos Aires — 2023
-**Fuente:** Buenos Aires Data (Gobierno de la Ciudad de Buenos Aires)
-**Link original:** https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+**Dataset:** The Simpsons by the Data* (Todd Schneider, publicado en Kaggle)
+**Link original/Fuente:** https://github.com/sujanjoejacob/Text-mining-with-Simpsons-Data
+
 
 
 ## Archivo incluido
 
-- `delitos_2023.zip`: CSV original comprimido en formato ZIP, sin modificaciones.
+
+- `simpsons_episodes.csv`: una fila por episodio (temporada, fecha de emisión, rating de IMDb, votos y audiencia en EE.UU.). Sin modificaciones.
+- `simpsons_script_lines.csv.zip`: una fila por línea de guion (episodio, personaje que habla y cantidad de palabras). Es el CSV original comprimido en ZIP, porque pesa 35 MB y supera el límite de subida web de GitHub. No se modificó su contenido. Mismo ZIP del repo.
+
 
 ## Por qué se incluye una copia
 
@@ -16,4 +19,4 @@ El portal oficial, tiene errores de carga y bloquea las descargas automatizadas 
 ## Cómo obtenerlo manualmente
 
 1. Ingresar al link original desde un navegador.
-2. Hacer clic en "Descargar".
+2. Descargar ambos archivos desde el repositorio fuente (el de guiones ya viene comprimido).
