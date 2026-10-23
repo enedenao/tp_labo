@@ -26,7 +26,7 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 
 Episodios,Claificacion,Personajes;Dialogos,años de estreno
 
-**Copia en el repositorio:** [`data/simpsons_episodes.csv](simpsons_script_lines.csv.zip). Ver [`data/README.md`](data/README.md) para más detalles.
+**Copia en el repositorio:** ['data/simpsons_episodes.csv'](simpsons_script_lines.csv.zip). Ver [`data/README.md`](data/README.md) para más detalles.
 
 ## Contenido del repositorio
 
