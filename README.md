@@ -20,11 +20,11 @@ Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones
 
 ## Dataset
 
-**Delitos en la Ciudad de Buenos Aires — 2023**
-**Fuente:** Buenos Aires Data, Gobierno de la Ciudad de Buenos Aires
-**Link original:** https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
+**Simpsons_Episodes_CSV**
+**Fuente:** GitHub
+**Link original:** https://github.com/sujanjoejacob/Text-mining-with-Simpsons-Data
 
-Registro de homicidios, hurtos, lesiones y robos ocurridos en la Ciudad durante 2023, con fecha, franja horaria, tipo y subtipo de delito, uso de arma o moto, barrio, comuna y coordenadas geográficas.
+Episodios,Claificacion,Personajes;Dialogos,años de estreno
 
 **Copia en el repositorio:** [`data/delitos_2023.zip`](data/delitos_2023.zip). Ver [`data/README.md`](data/README.md) para más detalles.
 
