@@ -4,26 +4,42 @@
 - **Debate y elección:** sábado 17/10
 - **Formulario de inscripción:** antes del domingo 18/10
 
-## Tema elegido y proceso de decisión
+> **Actualización:** el dataset de delitos fue reemplazado por uno sobre *Los Simpson*.
+
+## CAMBIO DEL DATASET
+
+Después de la inscripción, el grupo decidió reemplazar el dataset de delitos de CABA por uno sobre *Los Simpson*. Los motivos fueron:
+
+- **Originalidad:** la cátedra valora especialmente la originalidad en la elección del tema. Un análisis de la serie es menos habitual y permite una presentación más atractiva.
+- **Evitar datos sensibles:** el dataset de delitos involucra hechos que afectan a personas reales, y exige mucho cuidado para no estigmatizar barrios. Preferimos un tema donde ese riesgo no existe.
+
+**Sobre la fuente:** en la primera elección habíamos priorizado fuentes oficiales. El nuevo dataset no es oficial: fue recopilado por Todd Schneider y publicado en Kaggle. Lo aceptamos porque el tema no involucra datos sensibles, el dataset está bien documentado y es ampliamente utilizado, y priorizamos la originalidad que valora la cátedra. 
+
+Se evaluaron dos versiones del dataset de Los Simpson. Se descartó la de TidyTuesday porque estaba recortada a 2010–2016 y se eligió la versión completa.
+
+**Pregunta acordada:** ¿Qué personajes concentran el diálogo en *Los Simpson*, y existe una asociación entre el protagonismo de los personajes principales y la valoración de los episodios en IMDb que se mantenga a lo largo de las décadas?
+
+
+---
+### ~~Tema elegido y proceso de decisión~~
 
 **Dataset elegido:** Delitos en la Ciudad de Buenos Aires — 2023 (CSV)
 **Fuente:** Buenos Aires Data (Gobierno de la Ciudad) — https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42
 **Pregunta de investigación (versión inicial):** ¿Qué barrio o comuna de la Ciudad de Buenos Aires es más segura en cuanto a los delitos?
 
-### Cómo llegamos a esta elección
+Cómo llegamos a esta elección
 
 1. **Brainstorm individual:** se generaron diferentes ideas, indicando tema, dataset, pregunta posible, por qué era interesante y si los datos se podían descargar fácilmente.
 2. **Debate en el grupo de WhatsApp:** pusimos en común todas las propuestas y discutimos ventajas y desventajas de cada una: calidad de la fuente, facilidad de descarga, volumen de datos y si permitían cumplir con los requisitos del enunciado.
 3. **Elección:**  el grupo eligió el dataset de delitos de CABA propuesto por José.
 4. **Inscripción:** se completó el formulario de inscripción antes del domingo 18/10.
 
-### Por qué elegimos esta opción
+Por qué elegimos esta opción
 
 - **Fuente oficial y confiable:** datos publicados por el Gobierno de la Ciudad, con un diccionario de variables documentado. Como grupo preferimos fuentes oficiales antes que datasets de Kaggle y las otras opciones nos parecian más complejas para el análisis en relación al tiempo de entrega.
 - **Descarga directa en CSV:** no requiere API ni scraping, se carga en pandas sin complicaciones.
 - **Cubre los tres tipos de gráfico que pide la cátedra:**
 - **Pregunta clara y respondible** con los datos disponibles.
-
 
 
 ### Opciones descartadas:
