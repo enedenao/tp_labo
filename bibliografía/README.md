@@ -21,8 +21,12 @@ Para mantener el material organizado, registrar los enlaces utilizando el siguie
 | Recurso | Enlace | Descripción / utilidad | Aportado por |
 |---|---|---|---|
 | Ejemplo: Informe estadístico | [Ver recurso](https://www.indec.gob.ar/) | Fuente de indicadores económicos | Integrante |
-
-
+| Fundamentos del Prompting | [Ver recurso](https://www.promptingguide.ai/es/introduction/basics) | Conceptos básicos de prompting | Nao |
+| Subir archivos desde la web | [Ver recurso](https://docs.github.com/es/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) | Cómo cargar archivos al repo sin usar la terminal | Nao |
+| Ramas | [Ver recurso](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) | Qué es una rama y para qué sirve trabajar en ramas separadas | Nao |
+| Pull requests | [Ver recurso](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) | Cómo llevar los cambios de una rama a main | Nao |
+| Markdown en GitHub | [Ver recurso](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) | Formato de texto para README y celdas del notebook | Nao |
+| Colab y GitHub | [Ver recurso](https://colab.research.google.com/github/googlecolab/colabtools/blob/main/notebooks/colab-github-demo.ipynb) | Cómo abrir y guardar notebooks de GitHub desde Colab | Nao |
 
 _Pueden subir directamente archivos PDF u otros documentos relevantes a esta carpeta._
 
