@@ -45,7 +45,7 @@ Ver [`data/README.md`](data/README.md) para más detalles.
 - [notebook.ipynb](notebook.ipynb) — análisis en Python
 - [/data](/data) — dataset/instrucciones para obtenerlo
 - [/figuras](/figuras) — gráficos exportados
-- [informe](/informe) — informe académico en PDF
+- [/informe](/informe) — informe académico en PDF
 - [/presentación](/presentación) — presentación de la defensa
 - [/bibliografía](/bibliografía) — bibliografía
   
