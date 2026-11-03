@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Quién habla en Springfield? | TP Laboratorio de Métodos Cuantitativos</title>
+  <meta name="description" content="Análisis del diálogo de Los Simpson y su relación con el rating de IMDb. Trabajo práctico grupal, FCE UBA, 2C 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍩</text></svg>">
+
+  <!-- Tipografías: Bricolage Grotesque para títulos, Inter para texto (la misma familia que usan los gráficos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== Navegación fija ===== -->
+  <header class="barra">
+    <a class="marca" href="#inicio">¿Quién habla en Springfield?</a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#pregunta">Pregunta</a></li>
+        <li><a href="#datos">Datos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Portada con el gráfico interactivo ===== -->
+    <section id="inicio" class="portada">
+      <p class="contexto">Trabajo práctico grupal de Laboratorio de Métodos Cuantitativos, FCE UBA, 2do cuatrimestre 2026</p>
+      <h1>¿Quién habla en Springfield, y eso mueve el rating?</h1>
+      <p class="bajada">
+        Medimos cuántas de las palabras de cada episodio de Los Simpson dice la familia protagonista
+        y lo comparamos con la valoración en IMDb, temporada por temporada y década por década.
+      </p>
+
+      <figure class="reparto" aria-labelledby="reparto-titulo">
+        <figcaption id="reparto-titulo">
+          Reparto de las palabras habladas en
+          <strong id="reparto-decada">1989-1999</strong>
+        </figcaption>
+
+        <div class="selector" role="group" aria-label="Elegir década">
+          <button type="button" data-decada="1989-1999" aria-pressed="true">1989-1999</button>
+          <button type="button" data-decada="2000-2009" aria-pressed="false">2000-2009</button>
+          <button type="button" data-decada="2010-2016" aria-pressed="false">2010-2016</button>
+        </div>
+
+        <!-- El script dibuja aquí un segmento por personaje -->
+        <div class="barra-reparto" id="barra-reparto" role="img" aria-live="polite"></div>
+        <ul class="leyenda" id="leyenda"></ul>
+
+        <p class="dato-clave" id="dato-clave"></p>
+      </figure>
+    </section>
+
+    <!-- ===== Pregunta de investigación ===== -->
+    <section id="pregunta" class="seccion">
+      <h2>La pregunta</h2>
+      <div class="texto">
+        <p>
+          Nos propusimos responder dos cosas. Primero, qué personajes concentran el diálogo de la serie.
+          Segundo, si existe una asociación entre el protagonismo de los personajes principales
+          (Homer, Marge, Bart y Lisa) y el rating de IMDb de cada episodio, y si esa asociación
+          se mantiene a lo largo de las décadas.
+        </p>
+        <p>
+          Elegimos el tema por originalidad: una serie con más de 25 temporadas permite mirar
+          cómo cambia una misma relación a lo largo del tiempo, con datos de guion reales.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Datos y metodología ===== -->
+    <section id="datos" class="seccion">
+      <h2>Datos y metodología</h2>
+      <div class="texto">
+        <p>
+          Usamos el dataset de Los Simpson en su versión completa, con dos tablas: los
+          <strong>episodios</strong> (temporada, fecha de emisión y rating de IMDb) y las
+          <strong>líneas de guion</strong> (quién habla y cuántas palabras dice en cada línea).
+          La cobertura va de la temporada 1 a la 26, es decir, de 1989 a 2016.
+          <!-- TODO: completar con el nombre exacto y el link de la fuente del dataset -->
+        </p>
+      </div>
+
+      <dl class="pasos">
+        <div>
+          <dt>Protagonismo</dt>
+          <dd>Porcentaje de las palabras habladas en un episodio que corresponden a Homer, Marge, Bart y Lisa. Medimos por palabras y no por líneas, porque una línea puede ser una sola palabra o un párrafo.</dd>
+        </div>
+        <div>
+          <dt>Décadas</dt>
+          <dd>Agrupamos los episodios en 1989-1999, 2000-2009 y 2010-2016 para ver si las relaciones se mantienen en el tiempo. La última década está incompleta.</dd>
+        </div>
+        <div>
+          <dt>Cuartiles</dt>
+          <dd>Dentro de cada década, ordenamos los episodios por protagonismo y los dividimos en cuatro grupos de igual tamaño, de Q1 (menos protagonismo) a Q4 (más).</dd>
+        </div>
+        <div>
+          <dt>Herramientas</dt>
+          <dd>Python en Google Colab con pandas para la limpieza, transformaciones y resúmenes con groupby, y Matplotlib para los gráficos. El alcance es descriptivo: correlación y comparación por décadas, sin regresión ni análisis de texto.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===== Resultados: los tres gráficos ===== -->
+    <section id="resultados" class="seccion">
+      <h2>Resultados</h2>
+
+      <article class="hallazgo">
+        <div class="hallazgo-texto">
+          <h3>Homer habla una de cada cinco palabras</h3>
+          <p>
+            Homer concentra alrededor del 20&nbsp;% de las palabras en las tres décadas.
+            Marge, Bart y Lisa rondan entre el 7 y el 10&nbsp;% cada uno.
+            Juntos, los cuatro dicen menos de la mitad del diálogo (entre 45,6 y 47,3&nbsp;%):
+            el elenco secundario habla más que la familia, y ese reparto casi no cambia en 27 años.
+          </p>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 1">
+          <img src="img/grafico1_quien_concentra_dialogo.png"
+               alt="Gráfico de barras: porcentaje de palabras de Homer, Marge, Bart y Lisa por década, y del total de los cuatro frente al resto de los personajes."
+               loading="lazy">
+        </button>
+      </article>
+
+      <article class="hallazgo">
+        <div class="hallazgo-texto">
+          <h3>El rating sube, se estanca y cae; el protagonismo no lo sigue</h3>
+          <ol class="fases">
+            <li><span>Ascenso</span> temporadas 1 a 5 <b class="sube">▲ 0,53</b></li>
+            <li><span>Meseta</span> temporadas 5 a 8 <b>▼ 0,12</b></li>
+            <li class="quiebre"><span>Quiebre</span> temporadas 8 a 11 <b>▼ 0,93</b></li>
+            <li><span>Declive lento</span> temporadas 11 a 26 <b>▼ 0,58</b></li>
+          </ol>
+          <p>
+            Mientras tanto, la parte del diálogo de la familia oscila entre el 40 y el 56&nbsp;%
+            sin acompañar esas fases: sube en las temporadas 9 y 10, justo cuando el rating cae más rápido.
+          </p>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 2">
+          <img src="img/grafico2_evolucion_temporada.png"
+               alt="Dos gráficos de líneas por temporada: arriba el rating promedio de IMDb con cuatro fases marcadas; abajo el porcentaje de palabras de los cuatro principales."
+               loading="lazy">
+        </button>
+      </article>
+
+      <article class="hallazgo">
+        <div class="hallazgo-texto">
+          <h3>Lo que separa la nota es la década, no el protagonismo</h3>
+          <p>
+            Dentro de cada década, pasar de los episodios con menos protagonismo familiar (Q1)
+            a los de más (Q4) casi no cambia el rating. En cambio, entre los noventa y las décadas
+            siguientes hay alrededor de un punto de diferencia.
+          </p>
+          <table class="cambios">
+            <caption>Cambio de rating de Q1 a Q4, dentro de cada década</caption>
+            <thead>
+              <tr><th scope="col">Década</th><th scope="col">Q1</th><th scope="col">Q4</th><th scope="col">Cambio</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1989-1999</th><td>8,12</td><td>8,00</td><td>▼ 0,12</td></tr>
+              <tr><th scope="row">2000-2009</th><td>6,98</td><td>6,95</td><td>▼ 0,03</td></tr>
+              <tr><th scope="row">2010-2016</th><td>6,75</td><td>7,00</td><td>▲ 0,25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 3">
+          <img src="img/grafico3_protagonismo_vs_rating.png"
+               alt="Gráfico de líneas: rating promedio de IMDb según el cuartil de protagonismo de la familia, una línea por década. Las líneas son casi planas y están separadas por década."
+               loading="lazy">
+        </button>
+      </article>
+
+      <p class="nota-ampliar">Tocá cualquier gráfico para verlo en tamaño completo.</p>
+    </section>
+
+    <!-- ===== Conclusiones ===== -->
+    <section id="conclusiones" class="seccion">
+      <h2>Conclusiones</h2>
+      <div class="texto">
+        <p>
+          <strong>El diálogo está concentrado en Homer, no en la familia.</strong>
+          Homer es por lejos el personaje que más habla, pero la familia completa no llega a la mitad
+          de las palabras. Ese reparto es notablemente estable en las tres décadas.
+        </p>
+        <p>
+          <strong>No encontramos una asociación consistente entre protagonismo y rating.</strong>
+          Dentro de cada década, los episodios con más protagonismo familiar no están mejor ni peor
+          valorados, y el signo del pequeño cambio ni siquiera es el mismo en todas las décadas.
+        </p>
+        <p>
+          <strong>La época pesa más que el reparto del diálogo.</strong>
+          La caída del rating se concentra entre las temporadas 8 y 11 y continúa lentamente después,
+          con un protagonismo que se mantiene en el mismo rango. Lo que explica esa caída queda fuera
+          de lo que mide este trabajo.
+        </p>
+      </div>
+
+      <h3 class="subtitulo">Limitaciones</h3>
+      <ul class="limitaciones">
+        <li>Es un análisis de asociación: no permite afirmar causas.</li>
+        <li>Contar palabras mide cuánto habla un personaje, no cuán central es en la trama.</li>
+        <li>El rating de IMDb refleja a quienes votan, que no representan necesariamente a toda la audiencia.</li>
+        <li>La década 2010-2016 tiene menos temporadas que las otras dos.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Equipo y enlaces ===== -->
+    <section id="equipo" class="seccion">
+      <h2>Equipo</h2>
+      <ul class="equipo">
+        <li><span>Bautista Cortés</span> <a href="https://github.com/bauti0727">@bauti0727</a></li>
+        <li><span>Gabriel Goldadler</span> <a href="https://github.com/ggoldadler-blip">@ggoldadler-blip</a></li>
+        <li><span>José Luis Joannás</span> <a href="https://github.com/PAKETTE">@PAKETTE</a></li>
+        <li><span>Naomi Asato</span> <a href="https://github.com/enedenao">@enedenao</a></li>
+        <!-- TODO: completar nombre y apellido -->
+        <li><span>Integrante 5</span> <a href="https://github.com/dagut-rrd">@dagut-rrd</a></li>
+      </ul>
+
+      <div class="enlaces">
+        <a class="boton" href="https://github.com/enedenao/tp_labo">Ver el repositorio</a>
+        <a class="boton" href="https://github.com/enedenao/tp_labo/blob/main/notebook.ipynb">Abrir el notebook</a>
+        <!-- TODO: reemplazar por la ruta real del PDF del informe -->
+        <a class="boton" href="https://github.com/enedenao/tp_labo/tree/main/informe">Leer el informe</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>
+      Universidad de Buenos Aires, Facultad de Ciencias Económicas.
+      Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones.
+    </p>
+    <p>
+      El código de este sitio se generó con asistencia de IA (Claude) y fue revisado por el grupo.
+      La interpretación de los resultados es responsabilidad del grupo.
+    </p>
+  </footer>
+
+  <!-- Visor para ampliar gráficos -->
+  <dialog id="visor" aria-label="Gráfico ampliado">
+    <button type="button" class="cerrar" id="cerrar-visor">Cerrar</button>
+    <img id="visor-img" src="" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
