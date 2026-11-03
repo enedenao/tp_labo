@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Quién habla en Springfield? | TP Laboratorio de Métodos Cuantitativos</title>
+  <meta name="description" content="Análisis del diálogo de Los Simpson y su relación con el rating de IMDb. Trabajo práctico grupal, FCE UBA, 2C 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍩</text></svg>">
+
+  <!-- Tipografías: Luckiest Guy para títulos (estilo dibujo animado), Nunito para el texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== Navegación ===== -->
+  <header class="barra">
+    <a class="marca" href="#inicio">🍩 Springfield en datos</a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#reparto">Diálogo</a></li>
+        <li><a href="#datos">Datos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Portada: cielo con nubes ===== -->
+    <section id="inicio" class="portada">
+      <div class="nubes" aria-hidden="true">
+        <span class="nube n1"></span>
+        <span class="nube n2"></span>
+        <span class="nube n3"></span>
+        <span class="nube n4"></span>
+      </div>
+
+      <div class="portada-contenido">
+        <p class="contexto">TP grupal de Laboratorio de Métodos Cuantitativos, FCE UBA, 2C 2026</p>
+        <h1>¿Quién habla en Springfield, y eso mueve el rating?</h1>
+        <p class="bajada">
+          Contamos las palabras de 26 temporadas de Los Simpson para ver cuánto habla la familia
+          protagonista y si eso tiene que ver con la nota que le pone el público en IMDb.
+        </p>
+        <a class="boton grande" href="#reparto">Empezar el recorrido</a>
+      </div>
+
+      <!-- Rosquilla original (SVG propio). Al tocarla tira chispas. -->
+      <button type="button" class="rosquilla" id="rosquilla" aria-label="Tocar la rosquilla">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <ellipse cx="100" cy="112" rx="88" ry="78" fill="#1d1d2b"/>
+          <ellipse cx="100" cy="104" rx="84" ry="74" fill="#e9a65a"/>
+          <ellipse cx="100" cy="98" rx="74" ry="62" fill="#f47aa8" stroke="#1d1d2b" stroke-width="4"/>
+          <ellipse cx="100" cy="100" rx="24" ry="18" fill="#6ec3f4" stroke="#1d1d2b" stroke-width="4"/>
+          <g stroke-width="6" stroke-linecap="round">
+            <line x1="52" y1="70" x2="62" y2="64" stroke="#ffd521"/>
+            <line x1="80" y1="56" x2="88" y2="64" stroke="#4aa8e8"/>
+            <line x1="122" y1="58" x2="132" y2="54" stroke="#7bc96f"/>
+            <line x1="146" y1="76" x2="150" y2="86" stroke="#ffffff"/>
+            <line x1="62" y1="96" x2="66" y2="106" stroke="#7bc96f"/>
+            <line x1="136" y1="104" x2="146" y2="100" stroke="#ffd521"/>
+            <line x1="106" y1="128" x2="116" y2="124" stroke="#ffffff"/>
+            <line x1="84" y1="126" x2="88" y2="134" stroke="#4aa8e8"/>
+          </g>
+        </svg>
+        <span class="globo" id="globo-rosquilla" aria-live="polite"></span>
+      </button>
+    </section>
+
+    <!-- ===== Reparto del diálogo (interactivo) ===== -->
+    <section id="reparto" class="seccion">
+      <h2>¿Quién se queda con la palabra?</h2>
+      <p class="intro">Elegí una década y mirá cómo se reparten las palabras habladas.</p>
+
+      <figure class="tele" aria-labelledby="reparto-titulo">
+        <div class="pantalla">
+          <figcaption id="reparto-titulo">
+            Palabras habladas en <strong id="reparto-decada">1989-1999</strong>
+          </figcaption>
+
+          <div class="selector" role="group" aria-label="Elegir década">
+            <button type="button" data-decada="1989-1999" aria-pressed="true">1989-1999</button>
+            <button type="button" data-decada="2000-2009" aria-pressed="false">2000-2009</button>
+            <button type="button" data-decada="2010-2016" aria-pressed="false">2010-2016</button>
+          </div>
+
+          <div class="barra-reparto" id="barra-reparto" role="img" aria-live="polite"></div>
+          <ul class="leyenda" id="leyenda"></ul>
+          <p class="dato-clave" id="dato-clave"></p>
+        </div>
+        <div class="tele-patas" aria-hidden="true"><span></span><span></span></div>
+      </figure>
+    </section>
+
+    <!-- ===== Pregunta y datos ===== -->
+    <section id="datos" class="seccion">
+      <h2>La pregunta y los datos</h2>
+
+      <div class="dos-columnas">
+        <div class="tarjeta">
+          <h3>Qué quisimos saber</h3>
+          <p>
+            Qué personajes concentran el diálogo de la serie, y si el protagonismo de
+            Homer, Marge, Bart y Lisa está asociado con el rating de IMDb de cada episodio
+            de forma estable a lo largo de las décadas.
+          </p>
+        </div>
+        <div class="tarjeta">
+          <h3>Con qué datos</h3>
+          <p>
+            El dataset de Los Simpson en su versión completa: una tabla de <strong>episodios</strong>
+            (temporada, fecha y rating de IMDb) y otra de <strong>líneas de guion</strong>
+            (quién habla y cuántas palabras dice). Temporadas 1 a 26, de 1989 a 2016.
+            <!-- TODO: completar con el nombre exacto y el link de la fuente del dataset -->
+          </p>
+        </div>
+      </div>
+
+      <dl class="pasos">
+        <div>
+          <dt>Protagonismo</dt>
+          <dd>Porcentaje de las palabras de un episodio que dicen Homer, Marge, Bart y Lisa. Contamos palabras y no líneas, porque una línea puede ser un «¡D'oh!» o un discurso entero.</dd>
+        </div>
+        <div>
+          <dt>Décadas</dt>
+          <dd>1989-1999, 2000-2009 y 2010-2016, para ver si las relaciones se mantienen. La última está incompleta.</dd>
+        </div>
+        <div>
+          <dt>Cuartiles</dt>
+          <dd>Dentro de cada década, ordenamos los episodios por protagonismo en cuatro grupos iguales: de Q1 (menos) a Q4 (más).</dd>
+        </div>
+        <div>
+          <dt>Herramientas</dt>
+          <dd>Python en Google Colab, pandas y Matplotlib. Alcance descriptivo: correlación y comparación por décadas, sin regresión ni análisis de texto.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ===== Resultados ===== -->
+    <section id="resultados" class="seccion">
+      <h2>Lo que encontramos</h2>
+
+      <!-- Hallazgo 1 -->
+      <article class="hallazgo">
+        <div class="hallazgo-texto">
+          <span class="etiqueta">Hallazgo 1</span>
+          <h3>Homer dice una de cada cinco palabras</h3>
+          <p>
+            Homer concentra alrededor del 20&nbsp;% del diálogo en las tres décadas; Marge, Bart y Lisa
+            rondan entre el 7 y el 10&nbsp;% cada uno. Juntos dicen menos de la mitad: el resto del pueblo
+            habla más que la familia, y ese reparto casi no cambia en 27 años.
+          </p>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 1">
+          <img src="img/grafico1_quien_concentra_dialogo.png"
+               alt="Gráfico de barras: porcentaje de palabras de Homer, Marge, Bart y Lisa por década, y del total de los cuatro frente al resto de los personajes."
+               loading="lazy">
+        </button>
+      </article>
+
+      <!-- Hallazgo 2: explorador de fases -->
+      <article class="hallazgo interactivo">
+        <div class="hallazgo-texto">
+          <span class="etiqueta">Hallazgo 2</span>
+          <h3>El rating sube, se estanca y cae; el protagonismo no lo sigue</h3>
+          <p>Tocá cada etapa para ver qué pasó con la nota y con el diálogo de la familia.</p>
+
+          <div class="fases" role="tablist" aria-label="Etapas del rating">
+            <button type="button" role="tab" data-fase="0" aria-selected="true">1. Ascenso</button>
+            <button type="button" role="tab" data-fase="1" aria-selected="false">2. Meseta</button>
+            <button type="button" role="tab" data-fase="2" aria-selected="false">3. Quiebre</button>
+            <button type="button" role="tab" data-fase="3" aria-selected="false">4. Declive lento</button>
+          </div>
+          <div class="fase-panel" id="fase-panel" role="tabpanel" aria-live="polite"></div>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 2">
+          <img src="img/grafico2_evolucion_temporada.png"
+               alt="Dos gráficos de líneas por temporada: arriba el rating promedio de IMDb con cuatro fases marcadas; abajo el porcentaje de palabras de los cuatro principales."
+               loading="lazy">
+        </button>
+      </article>
+
+      <!-- Hallazgo 3: gráfico interactivo -->
+      <article class="hallazgo interactivo">
+        <div class="hallazgo-texto">
+          <span class="etiqueta">Hallazgo 3</span>
+          <h3>Lo que separa la nota es la década, no el protagonismo</h3>
+          <p>
+            Dentro de cada década, el rating casi no cambia entre los episodios con menos (Q1) y más (Q4)
+            protagonismo familiar. Entre los noventa y las décadas siguientes, en cambio, hay alrededor
+            de un punto de diferencia. Activá y desactivá las décadas para comparar.
+          </p>
+
+          <div class="selector chico" id="selector-q" role="group" aria-label="Mostrar u ocultar décadas"></div>
+          <div class="grafico-q">
+            <svg id="grafico-q" viewBox="0 0 560 320" role="img" aria-label="Rating promedio por cuartil de protagonismo y década"></svg>
+            <div class="tooltip" id="tooltip-q" hidden></div>
+          </div>
+          <p class="nota">Pasá el mouse o tocá un punto para ver el valor exacto.</p>
+        </div>
+        <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 3">
+          <img src="img/grafico3_protagonismo_vs_rating.png"
+               alt="Gráfico de líneas: rating promedio de IMDb según el cuartil de protagonismo de la familia, una línea por década. Las líneas son casi planas y están separadas por década."
+               loading="lazy">
+        </button>
+      </article>
+
+      <p class="nota">Tocá cualquier gráfico del notebook para verlo en tamaño completo.</p>
+    </section>
+
+    <!-- ===== Quiz ===== -->
+    <section id="quiz" class="seccion">
+      <h2>¿Prestaste atención?</h2>
+      <p class="intro">Cuatro preguntas con los datos de este trabajo.</p>
+
+      <div class="quiz tarjeta">
+        <p class="quiz-progreso" id="quiz-progreso"></p>
+        <h3 id="quiz-pregunta"></h3>
+        <div class="quiz-opciones" id="quiz-opciones"></div>
+        <p class="quiz-respuesta" id="quiz-respuesta" aria-live="polite"></p>
+        <button type="button" class="boton" id="quiz-siguiente" hidden>Siguiente pregunta</button>
+      </div>
+    </section>
+
+    <!-- ===== Conclusiones ===== -->
+    <section id="conclusiones" class="seccion">
+      <h2>Conclusiones</h2>
+
+      <div class="conclusiones">
+        <div class="tarjeta">
+          <h3>El diálogo es de Homer, no de la familia</h3>
+          <p>Homer es por lejos el que más habla, pero los cuatro juntos no llegan a la mitad de las palabras. El reparto es muy estable en las tres décadas.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Protagonismo y rating no van de la mano</h3>
+          <p>Dentro de cada década, los episodios con más protagonismo familiar no están mejor ni peor valorados, y el signo del pequeño cambio ni siquiera coincide entre décadas.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Pesa más la época</h3>
+          <p>La caída del rating se concentra entre las temporadas 8 y 11 y sigue lentamente después, con un protagonismo que se mueve en el mismo rango. Qué explica esa caída queda fuera de lo que mide este trabajo.</p>
+        </div>
+      </div>
+
+      <h3 class="subtitulo">Limitaciones</h3>
+      <ul class="limitaciones">
+        <li>Es un análisis de asociación: no permite afirmar causas.</li>
+        <li>Contar palabras mide cuánto habla un personaje, no cuán central es en la trama.</li>
+        <li>El rating de IMDb refleja a quienes votan, no necesariamente a toda la audiencia.</li>
+        <li>La década 2010-2016 tiene menos temporadas que las otras dos.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Equipo ===== -->
+    <section id="equipo" class="seccion">
+      <h2>Equipo</h2>
+      <ul class="equipo">
+        <li><span>Bautista Cortés</span> <a href="https://github.com/bauti0727">@bauti0727</a></li>
+        <li><span>Gabriel Goldadler</span> <a href="https://github.com/ggoldadler-blip">@ggoldadler-blip</a></li>
+        <li><span>José Luis Joannás</span> <a href="https://github.com/PAKETTE">@PAKETTE</a></li>
+        <li><span>Naomi Asato</span> <a href="https://github.com/enedenao">@enedenao</a></li>
+        <li><a href="https://github.com/dagut-rrd">@dagut-rrd</a></li>
+      </ul>
+
+      <div class="enlaces">
+        <a class="boton" href="https://github.com/enedenao/tp_labo">Ver el repositorio</a>
+        <a class="boton" href="https://github.com/enedenao/tp_labo/blob/main/notebook.ipynb">Abrir el notebook</a>
+        <!-- TODO: reemplazar por la ruta real del PDF del informe -->
+        <a class="boton" href="https://github.com/enedenao/tp_labo/tree/main/informe">Leer el informe</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Universidad de Buenos Aires, Facultad de Ciencias Económicas. Tecnicatura Universitaria en Gestión y Análisis de Datos en Organizaciones.</p>
+    <p>El código de este sitio se generó con asistencia de IA (Claude) y fue revisado por el grupo. La interpretación de los resultados es responsabilidad del grupo.</p>
+    <p>Sitio sin fines de lucro con fines académicos. Los Simpson y sus personajes pertenecen a sus respectivos titulares.</p>
+  </footer>
+
+  <!-- Visor para ampliar gráficos -->
+  <dialog id="visor" aria-label="Gráfico ampliado">
+    <button type="button" class="cerrar" id="cerrar-visor">Cerrar</button>
+    <img id="visor-img" src="" alt="">
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
