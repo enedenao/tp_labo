@@ -29,6 +29,8 @@ Para mantener el material organizado, registrar los enlaces utilizando el siguie
 | Colab y GitHub | [Ver recurso](https://colab.research.google.com/github/googlecolab/colabtools/blob/main/notebooks/colab-github-demo.ipynb) | Cómo abrir y guardar notebooks de GitHub desde Colab | Nao |
 | Lo básico de LaTeX en 5min | [Ver recurso](https://www.youtube.com/watch?v=fPdcNC6VKtI) | Video de youtube / Ayuda informe | Nao |
 | Insertar imágenes en Overleaf | [Ver recurso](https://www.overleaf.com/learn/latex/Inserting_Images) | Para poner los gráficos de figuras/ en el informe | Nao |
+| Video introductorio de Overleaf | [Ver recurso](https://www.youtube.com/live/cwCQm61-LP0?si=QitFnoSjIEQGeNtr) | Para preparar el informe | Gabi |
+
 
 _Pueden subir directamente archivos PDF u otros documentos relevantes a esta carpeta._
 
