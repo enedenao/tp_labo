@@ -44,8 +44,8 @@ Ver [`data/README.md`](data/README.md) para más detalles.
 - [brainstorm.md](brainstorm.md) — propuestas de temas y preguntas de cada integrante
 - [notebook.ipynb](notebook.ipynb) — análisis en Python
 - [/data](/data) — dataset/instrucciones para obtenerlo
-- `figuras/` — gráficos exportados
-- `informe/` — informe académico en PDF
+- [/figuras](/figuras) — gráficos exportados
+- [informe](/informe) — informe académico en PDF
 - [/presentación](/presentación) — presentación de la defensa
 - [/bibliografía](/bibliografía) — bibliografía
   
