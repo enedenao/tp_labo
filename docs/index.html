@@ -23,8 +23,9 @@
     <a class="marca" href="#inicio">🍩 Springfield en datos</a>
     <nav aria-label="Secciones">
       <ul>
-        <li><a href="#reparto">Diálogo</a></li>
         <li><a href="#datos">Datos</a></li>
+        <li><a href="#limpieza">Limpieza</a></li>
+        <li><a href="#reparto">Diálogo</a></li>
         <li><a href="#resultados">Resultados</a></li>
         <li><a href="#quiz">Quiz</a></li>
         <li><a href="#conclusiones">Conclusiones</a></li>
@@ -52,7 +53,7 @@
           Contamos las palabras de 26 temporadas de Los Simpson para ver cuánto habla la familia
           protagonista y si eso tiene que ver con la nota que le pone el público en IMDb.
         </p>
-        <a class="boton grande" href="#reparto">Empezar el recorrido</a>
+        <a class="boton grande" href="#datos">Empezar el recorrido</a>
       </div>
 
       <!-- Rosquilla original (SVG propio). Al tocarla tira chispas. -->
@@ -75,31 +76,6 @@
         </svg>
         <span class="globo" id="globo-rosquilla" aria-live="polite"></span>
       </button>
-    </section>
-
-    <!-- ===== Reparto del diálogo (interactivo) ===== -->
-    <section id="reparto" class="seccion">
-      <h2>¿Quién se queda con la palabra?</h2>
-      <p class="intro">Elegí una década y mirá cómo se reparten las palabras habladas.</p>
-
-      <figure class="tele" aria-labelledby="reparto-titulo">
-        <div class="pantalla">
-          <figcaption id="reparto-titulo">
-            Palabras habladas en <strong id="reparto-decada">1989-1999</strong>
-          </figcaption>
-
-          <div class="selector" role="group" aria-label="Elegir década">
-            <button type="button" data-decada="1989-1999" aria-pressed="true">1989-1999</button>
-            <button type="button" data-decada="2000-2009" aria-pressed="false">2000-2009</button>
-            <button type="button" data-decada="2010-2016" aria-pressed="false">2010-2016</button>
-          </div>
-
-          <div class="barra-reparto" id="barra-reparto" role="img" aria-live="polite"></div>
-          <ul class="leyenda" id="leyenda"></ul>
-          <p class="dato-clave" id="dato-clave"></p>
-        </div>
-        <div class="tele-patas" aria-hidden="true"><span></span><span></span></div>
-      </figure>
     </section>
 
     <!-- ===== Pregunta y datos ===== -->
@@ -147,6 +123,100 @@
       </dl>
     </section>
 
+<!-- ===== Limpieza ===== -->
+    <section id="limpieza" class="seccion">
+      <h2>Cómo limpiamos los datos</h2>
+      <p class="intro">De los datos crudos a la base del análisis, paso a paso.</p>
+
+      <div class="dos-columnas">
+        <!-- Embudo de líneas de guion -->
+        <div class="tarjeta">
+          <h3>Líneas de guion</h3>
+          <div style="display:grid;gap:.9rem;margin-top:1rem">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Archivo original</span><span>158.271</span></div>
+              <div style="height:1.4rem;width:100%;background:#ffd521;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Filas bien armadas</span><span>158.248</span></div>
+              <div style="height:1.4rem;width:99.99%;background:#ffd521;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+              <small style="display:inline-block;margin-top:.3rem;background:#f47aa8;border:2px solid #1d1d2b;border-radius:999px;padding:0 .6rem;font-weight:800">− 23 filas con comas de más</small>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Solo líneas habladas</span><span>132.089</span></div>
+              <div style="height:1.4rem;width:83.5%;background:#ffd521;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+              <small style="display:inline-block;margin-top:.3rem;background:#f47aa8;border:2px solid #1d1d2b;border-radius:999px;padding:0 .6rem;font-weight:800">− 26.159 descripciones de escena</small>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Con personaje identificado</span><span>132.087</span></div>
+              <div style="height:1.4rem;width:83.5%;background:#7bc96f;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+              <small style="display:inline-block;margin-top:.3rem;background:#f47aa8;border:2px solid #1d1d2b;border-radius:999px;padding:0 .6rem;font-weight:800">− 2 líneas sin personaje</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embudo de episodios -->
+        <div class="tarjeta">
+          <h3>Episodios</h3>
+          <div style="display:grid;gap:.9rem;margin-top:1rem">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Episodios en el dataset</span><span>600</span></div>
+              <div style="height:1.4rem;width:100%;background:#6ec3f4;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:800"><span>Base final del análisis</span><span>564</span></div>
+              <div style="height:1.4rem;width:94%;background:#7bc96f;border:3px solid #1d1d2b;border-radius:.5rem"></div>
+              <small style="display:inline-block;margin-top:.3rem;background:#f47aa8;border:2px solid #1d1d2b;border-radius:999px;padding:0 .6rem;font-weight:800">− 36 episodios sin guion</small>
+            </div>
+          </div>
+          <p style="margin-top:1.2rem">
+            33 de esos 36 episodios son de 2010-2016, incluidos los 4 de la temporada 28, que recién empezaba cuando se armó el dataset.
+            Por eso ese período se apoya en menos casos (118 episodios) y sus resultados se leen con más cautela.
+          </p>
+        </div>
+      </div>
+
+      <dl class="pasos">
+        <div>
+          <dt>Personajes por número</dt>
+          <dd>Cada personaje tiene un número de identificación único. Contamos con ese número y no con el nombre escrito, porque el nombre no es confiable: hay 63 nombres que contienen «Bart», como «Adult Bart» o «Teenage Bart», pero también otros personajes, como «Bartender».</dd>
+        </div>
+        <div>
+          <dt>Sin inventar datos</dt>
+          <dd>Los episodios sin guion o sin rating quedaron afuera. No rellenamos ningún faltante con promedios.</dd>
+        </div>
+        <div>
+          <dt>Décadas desiguales</dt>
+          <dd>La serie se estrenó en diciembre de 1989, con un solo episodio ese año: lo sumamos a 1989-1999. El dataset termina en octubre de 2016, así que el último período tiene solo 7 años.</dd>
+        </div>
+      </dl>
+    </section>    
+    
+    <!-- ===== Reparto del diálogo (interactivo) ===== -->
+    <section id="reparto" class="seccion">
+      <h2>¿Quién se queda con la palabra?</h2>
+      <p class="intro">Elegí una década y mirá cómo se reparten las palabras habladas.</p>
+
+      <figure class="tele" aria-labelledby="reparto-titulo">
+        <div class="pantalla">
+          <figcaption id="reparto-titulo">
+            Palabras habladas en <strong id="reparto-decada">1989-1999</strong>
+          </figcaption>
+
+          <div class="selector" role="group" aria-label="Elegir década">
+            <button type="button" data-decada="1989-1999" aria-pressed="true">1989-1999</button>
+            <button type="button" data-decada="2000-2009" aria-pressed="false">2000-2009</button>
+            <button type="button" data-decada="2010-2016" aria-pressed="false">2010-2016</button>
+          </div>
+
+          <div class="barra-reparto" id="barra-reparto" role="img" aria-live="polite"></div>
+          <ul class="leyenda" id="leyenda"></ul>
+          <p class="dato-clave" id="dato-clave"></p>
+        </div>
+        <div class="tele-patas" aria-hidden="true"><span></span><span></span></div>
+      </figure>
+    </section>
+    
     <!-- ===== Resultados ===== -->
     <section id="resultados" class="seccion">
       <h2>Lo que encontramos</h2>
@@ -157,9 +227,9 @@
           <span class="etiqueta">Hallazgo 1</span>
           <h3>Homer dice una de cada cinco palabras</h3>
           <p>
-            Homer concentra alrededor del 20&nbsp;% del diálogo en las tres décadas; Marge, Bart y Lisa
-            rondan entre el 7 y el 10&nbsp;% cada uno. Juntos dicen menos de la mitad: el resto del pueblo
-            habla más que la familia, y ese reparto casi no cambia en 27 años.
+            De más de 6.000 personajes, cuatro dicen casi la mitad de las palabras de la serie.
+            Homer concentra alrededor del 20&nbsp;% del diálogo; Marge, Bart y Lisa rondan entre
+            el 7 y el 10&nbsp;% cada uno. Y ese reparto casi no cambia en 27 años.
           </p>
         </div>
         <button type="button" class="figura" data-ampliar aria-label="Ampliar gráfico 1">
@@ -239,16 +309,16 @@
 
       <div class="conclusiones">
         <div class="tarjeta">
-          <h3>El diálogo es de Homer, no de la familia</h3>
-          <p>Homer es por lejos el que más habla, pero los cuatro juntos no llegan a la mitad de las palabras. El reparto es muy estable en las tres décadas.</p>
+          <h3>El diálogo se concentra en la familia</h3>
+          <p>De más de 6.000 personajes, Homer, Marge, Bart y Lisa dicen casi la mitad de las palabras, con Homer muy por encima del resto. Ese reparto es muy estable en las tres décadas.</p>
         </div>
         <div class="tarjeta">
           <h3>Protagonismo y rating no van de la mano</h3>
-          <p>Dentro de cada década, los episodios con más protagonismo familiar no están mejor ni peor valorados, y el signo del pequeño cambio ni siquiera coincide entre décadas.</p>
+          <p>En general, los episodios con más protagonismo familiar no están mejor ni peor valorados. Solo en 2010-2016 aparece una asociación positiva, y es débil.</p>
         </div>
         <div class="tarjeta">
           <h3>Pesa más la época</h3>
-          <p>La caída del rating se concentra entre las temporadas 8 y 11 y sigue lentamente después, con un protagonismo que se mueve en el mismo rango. Qué explica esa caída queda fuera de lo que mide este trabajo.</p>
+          <p>La caída del rating se concentra en las temporadas 9 a 11 y sigue lentamente después, con un protagonismo que se mueve en el mismo rango. Qué explica esa caída queda fuera de lo que mide este trabajo.</p>
         </div>
       </div>
 
@@ -257,13 +327,13 @@
         <li>Es un análisis de asociación: no permite afirmar causas.</li>
         <li>Contar palabras mide cuánto habla un personaje, no cuán central es en la trama.</li>
         <li>El rating de IMDb refleja a quienes votan, no necesariamente a toda la audiencia.</li>
-        <li>La década 2010-2016 tiene menos temporadas que las otras dos.</li>
+        <li>La década 2010-2016 tiene solo 7 años y perdió 33 episodios sin guion, así que su resultado se apoya en menos datos.</li>
       </ul>
     </section>
     <!-- ===== Video ===== -->
     <section id="video" class="seccion">
-      <h2>El TP en video</h2>
-      <p class="intro">Un resumen de 1 minuto con la pregunta, los gráficos y las conclusiones.</p>
+      <h2>El recorrido del trabajo en video</h2>
+      <p class="intro">¿Sin tiempo para leer todo? Hay alguien que te lo vuelve a explicar en un minuto:</p>
       <div style="max-width:48rem;aspect-ratio:16/9;border:3px solid #1d1d2b;border-radius:1rem;overflow:hidden;box-shadow:6px 6px 0 #1d1d2b;background:#1d1d2b">
         <iframe src="https://drive.google.com/file/d/1n2clMTgnG0jtGCL4emglHN0JSawTPu5_/preview"
                 title="Video explicativo del TP"
