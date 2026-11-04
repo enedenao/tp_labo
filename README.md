@@ -47,6 +47,7 @@ Ver [`data/README.md`](data/README.md) para más detalles.
 - [/figuras](/figuras) — gráficos exportados
 - [/informe](/informe) — informe académico en PDF
 - [/presentación](/presentación) — presentación de la defensa
+- [/video](/video) — video explicativo
 - [/bibliografía](/bibliografía) — bibliografía
   
 ## Fechas clave
