@@ -44,7 +44,7 @@ Mediante el procesamiento de más de 158.000 líneas de diálogo en 600 episodio
 2. **Independencia del Protagonismo:** La caída histórica en las notas de IMDb (de 8.07 en la primera década a 6.79 en la tercera) **no estuvo causada** por un aumento o disminución en el diálogo de los personajes principales.
 3. **Efectos Cruzados:** Marge muestra una leve correlación negativa en las primeras décadas, mientras que Homer muestra una leve relación positiva al controlar por temporada; ambos efectos se cancelan al evaluar la familia en conjunto.
 
-
+## Requisitos y Tecnologías
 
 - **Python:** `pandas`, `matplotlib`, `seaborn`, `statsmodels`.
 - **Diseño de Diapositivas:** Plantilla en Canva / HTML-CSS.
