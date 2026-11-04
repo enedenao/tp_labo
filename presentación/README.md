@@ -47,4 +47,4 @@ Mediante el procesamiento de más de 158.000 líneas de diálogo en 600 episodio
 ## Requisitos y Tecnologías
 
 - **Python:** `pandas`, `matplotlib`, `seaborn`, `statsmodels`.
-- **Diseño de Diapositivas:** Plantilla en Canva / HTML-CSS.
+- **Diseño de Diapositivas:** Plantilla en Canva 
