@@ -5,6 +5,7 @@
 Laboratorio de Métodos Cuantitativos Aplicados a la Gestión · FCE-UBA · 2C 2026
 
 **Integrantes:** Bautista Cortés · Gabriel Goldadler · José Luis Joannás · Naomi Asato · @dagut-rrd 
+
 ---------------------------------------------------------------------------------------------------
 **Presentación**
 
