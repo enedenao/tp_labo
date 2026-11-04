@@ -1,5 +1,5 @@
 
-**Protagonismo de los personajes y valoración de los episodios de Los Simpson (1989-2016)**
+## Protagonismo de los personajes y valoración de los episodios de Los Simpson (1989-2016)
 
 Laboratorio de Métodos Cuantitativos Aplicados a la Gestión · FCE-UBA · 2C 2026
 
