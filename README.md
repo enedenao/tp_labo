@@ -47,8 +47,35 @@ Ver [`data/README.md`](data/README.md) para más detalles.
 - [/figuras](/figuras) — gráficos exportados
 - [/informe](/informe) — informe académico en PDF
 - [/presentación](/presentación) — presentación de la defensa
+- [/docs](/docs) — código del sitio web (HTML, CSS y JavaScript)
 - [/video](/video) — video explicativo
 - [/bibliografía](/bibliografía) — bibliografía
+
+## Organización del equipo
+
+Dividimos el análisis en cinco etapas, una por integrante, y editamos el notebook por turnos para no pisar el trabajo del otro. Cada integrante trabajó en su propia rama y los cambios se integraron a `main`. Hicimos una reunión semanal después de la clase de los martes.
+
+| Etapa | Integrante | Qué incluye |
+|---|---|---|
+| 1. Carga y exploración | @enedenao | Carga de los CSV, estructura, tipos de dato, nulos, duplicados y estadísticas descriptivas. Dataset subido a [/data](/data). |
+| 2. Pregunta y transformaciones | @bauti0727 | Pregunta de investigación y las dos transformaciones justificadas. |
+| 3. Resúmenes con groupby | @PAKETTE | Resúmenes agrupados con su interpretación. |
+| 4. Gráficos | @dagut-rrd | Los tres gráficos, exportados a [/figuras](/figuras). |
+| 5. Conclusiones e informe | @ggoldadler-blip | Conclusiones del notebook e informe en Overleaf. |
+
+Al final, todos revisamos el informe y armamos la presentación juntos.
+
+## Uso de inteligencia artificial
+
+Usamos herramientas de IA como apoyo en distintas etapas:
+
+- **Código y análisis:** para proponer y corregir código. En el notebook donde se usó IA lo indica.
+- **Redacción:** para mejorar la claridad del informe y de los textos.
+- **Web:** el código del sitio se generó con asistencia de IA (Claude).
+- **Video:** las escenas se generaron con IA (Gemini) y se editaron en Filmora.
+
+La ejecución, la revisión de los resultados y las decisiones del análisis fueron del grupo.
+
   
 ## Fechas clave
 
